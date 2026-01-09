@@ -8,13 +8,13 @@
  */
 
 export const REPORT_CONFIG = {
-  reportDate: "Dec,10 2025",
+  reportDate: "Jan,10 2025",
 
   reportPeriodStart: "March 2025",
-  reportPeriodEnd: "November 2025",
-  reportPeriodDisplay: "March -November 2025",
+  reportPeriodEnd: "December 2025",
+  reportPeriodDisplay: "March -December 2025",
   baselinePeriod: "Dec'24",
-  currentPeriod: "Nov'25",
+  currentPeriod: "Dec'25",
   monthOrder: [
     "March",
     "April",
@@ -25,13 +25,14 @@ export const REPORT_CONFIG = {
     "September",
     "October",
     "November",
+    "December",
   ],
 
   comparisonStartMonth: "March",
-  comparisonEndMonth: "November",
+  comparisonEndMonth: "December",
 
   comparisonStartMonthAbbr: "Mar",
-  comparisonEndMonthAbbr: "Nov",
+  comparisonEndMonthAbbr: "Dec",
 
   baselineMonthAbbr: "Dec",
   currentMonthAbbr: "Nov",

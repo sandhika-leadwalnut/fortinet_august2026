@@ -42,7 +42,7 @@ export const useKeywordRankingChartData = (
     ? createChartData(
         keywordRankingData.top3.march,
         keywordRankingData.top3.september,
-        keywordRankingData.top3.november
+        keywordRankingData.top3.december
       )
     : [];
 
@@ -50,14 +50,14 @@ export const useKeywordRankingChartData = (
     ? createChartData(
         keywordRankingData.firstPage.march,
         keywordRankingData.firstPage.september,
-        keywordRankingData.firstPage.november
+        keywordRankingData.firstPage.december
       )
     : [];
 
   const maxVal = keywordRankingData
     ? calculateMaxValue(
-        keywordRankingData.top3.november,
-        keywordRankingData.firstPage.november
+        keywordRankingData.top3.december,
+        keywordRankingData.firstPage.december
       )
     : 0;
 
