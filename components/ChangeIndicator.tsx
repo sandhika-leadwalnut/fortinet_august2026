@@ -2,7 +2,7 @@ import { ArrowDownIcon, ArrowUpIcon } from "./icons";
 
 const ChangeIndicator = ({ value }: { value: number }) => {
   if (value === 0) {
-    return <span className="text-gray-700">0</span>;
+    return <span className="text-gray-700">-</span>;
   }
   const isPositive = value > 0;
   const Icon = isPositive ? ArrowUpIcon : ArrowDownIcon;

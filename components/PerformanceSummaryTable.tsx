@@ -20,6 +20,7 @@ const PerformanceSummaryTable = ({ data }: PerformanceSummaryTableProps) => {
     REPORT_CONFIG.comparisonEndMonthAbbr
   );
 
+
   return (
     <div
       className="bg-white p-4 sm:p-6 shadow-md border-t-4 rounded-lg hover:shadow-lg transition-all duration-200"

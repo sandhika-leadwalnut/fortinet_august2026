@@ -36,6 +36,7 @@ export interface PerformanceSummaryData {
   status: "Good" | "Needs Attention";
 }
 
+
 export interface BusinessImpactData {
   category: string;
   baseline: number;

@@ -15,6 +15,7 @@ export const kpiData: KpiData = {
   keywordsTracked: 64,
   planTotalBacklinks: 1200,
 };
+import { getPerformanceStatus } from "../utils/performanceStatus";
 
 export const backlinkGrowthData: BacklinkGrowth[] = [
   { month: "Mar '25", totalBacklinks: 34 },
@@ -41,30 +42,32 @@ export const top3Keywords: KeywordPosition[] = [
 ];
 
 export const firstPageKeywords: KeywordPosition[] = [
-  { name: "what is ztna", change: 5, rank: 2 },
-  { name: "cybersecurity", change: 6, rank: 9 },
-  { name: "What is SD WAN", change: -3, rank: 5 },
-  { name: "sd wan", change: 6, rank: 3 },
-  { name: "sase", change: -4, rank: 3 },
-  { name: "firewall", change: 0, rank: 4 },
-  { name: "what is firewall", change: 0, rank: 4 },
-  { name: "what is cyber attack", change: -2, rank: 4 },
-  { name: "cyber attack", change: 7, rank: 6 },
-  { name: "iot security", change: -1, rank: 2 },
-  { name: "what is iot security", change: 0, rank: 2 },
-  { name: "what is ot security", change: -5, rank: 4 },
-  { name: "ot security", change: -7, rank: 3 },
-  { name: "malware", change: 1, rank: 7 },
-  { name: "what is malware", change: 3, rank: 7 },
-  { name: "endpoint security", change: -5, rank: 3 },
-  { name: "what is endpoint security", change: -4, rank: 3 },
-  { name: "what is ransomware", change: 9, rank: 5 },
-  { name: "ransomware", change: 4, rank: 6 },
-  { name: "casb", change: -5, rank: 5 },
-  { name: "AI Security", change: 93, rank: 4 },
-  { name: "AI Security systems", change: 93, rank: 4 },
-  { name: "AI Cybersecurity", change: 9, rank: 3 },
-  {name:"PAM", change:2, rank:2},
+  { name: "AI Cybersecurity", change: 8, rank: 3 },
+  { name: "iot security", change: -1, rank: 4 },
+  { name: "what is iot security", change: 0, rank: 4 },
+  {name:"PAM", change:2, rank:5},
+  { name: "sd wan", change: 6, rank: 6 },
+  { name: "what is malware", change: 3, rank: 6 },
+  { name: "what is ztna", change: 5, rank: 7},
+  { name: "sase", change: -4, rank: 7 },
+  { name: "firewall", change: 0, rank: 7 },
+  { name: "cyber attack", change: 7, rank: 7 },
+   { name: "ransomware", change: 4, rank: 7},
+  { name: "What is SD WAN", change: -3, rank: 8 },
+  { name: "what is firewall", change: 0, rank: 8 },
+  { name: "what is cyber attack", change: -2, rank: 8 },
+  { name: "what is ot security", change: -5, rank: 8 },
+  { name: "malware", change: 1, rank: 8 },
+  { name: "what is endpoint security", change: -4, rank: 8 },
+   { name: "AI Security", change: 93, rank: 8 },
+  { name: "AI Security systems", change: 93, rank: 8 },
+ { name: "ot security", change: -7, rank: 9 },
+   { name: "endpoint security", change: -5, rank: 9 },
+  { name: "what is ransomware", change: 3, rank: 9 },
+  { name: "cybersecurity", change: 6, rank: 10 },
+  { name: "casb", change: -5, rank: 10 },
+ 
+  
 
 ];
 
@@ -87,7 +90,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 7,
     bestKeywordMove: "what is ztna (+5)",
     worstKeywordMove: "ZTNA (-8)",
-    status: "Good",
+   
   },
   {
     url: "Network Security",
@@ -97,7 +100,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 1,
     bestKeywordMove: "-",
     worstKeywordMove: "what is network security (-11)",
-    status: "Needs Attention",
+    
   },
   {
     url: "Cybersecurity",
@@ -107,7 +110,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 1,
     bestKeywordMove: "cybersecurity (+6)",
     worstKeywordMove: "-",
-    status: "Good",
+   
   },
   {
     url: "SD-WAN",
@@ -117,7 +120,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 1,
     bestKeywordMove: "sd wan (+6)",
     worstKeywordMove: "What is SD WAN(-3)",
-    status: "Good",
+   
   },
   {
     url: "SASE",
@@ -126,16 +129,16 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 0,
     bestKeywordMove: "",
     worstKeywordMove: "what is sase (-7)",
-    status: "Good",
+  
   },
   {
     url: "Firewall",
     urlLink: "https://www.fortinet.com/resources/cyberglossary/firewall",
     backlinkGrowth: 88,
     paChange: 2,
-    bestKeywordMove: "what is firewall (0)",
+    bestKeywordMove: "",
     worstKeywordMove: "-",
-    status: "Good",
+   
   },
   {
     url: "Cyber Attack",
@@ -145,7 +148,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 1,
     bestKeywordMove: "cyber attack (+7)",
     worstKeywordMove: "what is cyber attack	 (-2)",
-    status: "Good",
+   
   },
   {
     url: "IoT Security",
@@ -154,7 +157,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 0,
     bestKeywordMove: "what is iot security (0)",
     worstKeywordMove: "iot security (-1)",
-    status: "Good",
+   
   },
   {
     url: "Ransomware Hub",
@@ -163,7 +166,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: -8,
     bestKeywordMove: "-",
     worstKeywordMove: "-",
-    status: "Needs Attention",
+    
   },
   {
     url: "OT Security",
@@ -173,7 +176,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 1,
     bestKeywordMove: "-",
     worstKeywordMove: " ot security (-7)",
-    status: "Good",
+    
   },
   {
     url: "Malware",
@@ -181,8 +184,8 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     backlinkGrowth: 62,
     paChange: 0,
     bestKeywordMove: "what is malware (+3)",
-    worstKeywordMove: "-",
-    status: "Good",
+    worstKeywordMove: "malware(-1)",
+    
   },
   {
     url: "Endpoint Security",
@@ -192,7 +195,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 0,
     bestKeywordMove: "",
     worstKeywordMove: "endpoint security (-5)",
-    status: "Good",
+    
   },
   {
     url: "SD-WAN Products",
@@ -201,7 +204,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 1,
     bestKeywordMove: "-",
     worstKeywordMove: "SD-WAN solutions (-60)",
-    status: "Needs Attention",
+   
   },
   {
     url: "SecOps",
@@ -210,7 +213,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 7,
     bestKeywordMove: "-",
     worstKeywordMove: "what is secops (-20)",
-    status: "Needs Attention",
+   
   },
   {
     url: "Ransomware Page",
@@ -219,7 +222,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 2,
     bestKeywordMove: "ransomware (+4)",
     worstKeywordMove: "-",
-    status: "Good",
+   
   },
   {
     url: "Quantum Security",
@@ -228,7 +231,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 4,
     bestKeywordMove: "-",
     worstKeywordMove: "-",
-    status: "Good",
+   
   },
   {
     url: "Rugged Firewall",
@@ -237,7 +240,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: -11,
     bestKeywordMove: "-",
     worstKeywordMove: "-",
-    status: "Needs Attention",
+    
   },
   {
     url: "Cloud Security",
@@ -247,7 +250,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 2,
     bestKeywordMove: "cloud security (+9)",
     worstKeywordMove: "what is cloud security(-8)",
-    status: "Good",
+   
   },
   {
     url: "CASB",
@@ -256,7 +259,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: -11,
     bestKeywordMove: "casb security (+83)",
     worstKeywordMove: "casb (-5)",
-    status: "Needs Attention",
+    
   },
   {
     url: "FortiAI",
@@ -266,7 +269,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 12,
     bestKeywordMove: "-",
     worstKeywordMove: "-",
-    status: "Needs Attention",
+   
   },
   {
     url: "AI Security",
@@ -275,7 +278,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 15,
     bestKeywordMove: "AI Security systems (+93)",
     worstKeywordMove: "-",
-    status: "Good",
+    
   },
   {
     url: "Cyber Threat Intelligence",
@@ -285,7 +288,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 1,
     bestKeywordMove: "threat intelligence (+26)",
     worstKeywordMove: "-",
-    status: "Good",
+   
   },
   {
     url: "AI in Cybersecurity",
@@ -293,9 +296,9 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
       "https://www.fortinet.com/resources/cyberglossary/artificial-intelligence-in-cybersecurity",
     backlinkGrowth: 4,
     paChange: 3,
-    bestKeywordMove: "AI Cybersecurity (+9)",
+    bestKeywordMove: "AI Cybersecurity (+8)",
     worstKeywordMove: "role of ai in cyber security(-99)",
-    status: "Needs Attention",
+  
   },
   {
     url: "Application Security",
@@ -305,7 +308,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 4,
     bestKeywordMove: "Application security definition (+87)",
     worstKeywordMove: "-",
-    status: "Good",
+    
   },
   {
     url: "Cloud Data Protection",
@@ -315,7 +318,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 1,
     bestKeywordMove: "Data security in the cloud (+32)",
     worstKeywordMove: "Cloud Data Security(-19)",
-    status: "Needs Attention",
+    
   },
   {
     url: "PAM",
@@ -325,7 +328,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 1,
     bestKeywordMove: "PAM (+2)",
     worstKeywordMove: "-",
-    status: "Good",
+   
   },
   {
     url: "Fortinet Homepage",
@@ -334,7 +337,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 0,
     bestKeywordMove: "-",
     worstKeywordMove: "-",
-    status: "Needs Attention",
+    
   },
   {
     url: "Quantum Safe Encryption",
@@ -344,7 +347,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 0,
     bestKeywordMove: "-",
     worstKeywordMove: "-",
-    status: "Good",
+   
   },
   {
     url: "Cloud Security Tips",
@@ -354,7 +357,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 3,
     bestKeywordMove: "-",
     worstKeywordMove: "-",
-    status: "Good",
+   
   },
   {
     url: "Cyber Risk",
@@ -364,7 +367,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 3,
     bestKeywordMove: "cyber risk(+16)",
     worstKeywordMove: "-",
-    status: "Good",
+   
   },
    {
     url: "Ai Governance",
@@ -374,7 +377,7 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 8,
     bestKeywordMove: "-",
     worstKeywordMove: "-",
-    status: "Good",
+    
   },
   {
     url: "Banking Cybersecurity",
@@ -384,11 +387,17 @@ export const performanceSummaryData: PerformanceSummaryData[] = [
     paChange: 4,
     bestKeywordMove: "-",
     worstKeywordMove: "cybersecurity in banking(-76)",
-    status: "Needs Attention",
+   
   },
   
 
-];
+].map((item) => ({
+    ...item,
+    status: getPerformanceStatus(
+      item.bestKeywordMove,
+      item.worstKeywordMove
+    ),
+  }));
 
 export const businessImpactData: BusinessImpactData[] = [
   {
