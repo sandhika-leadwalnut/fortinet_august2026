@@ -20,7 +20,7 @@ const DashboardHeader = ({ data }: DashboardHeaderProps) => {
           REPORT_CONFIG.reportPeriodEnd.split(" ")[0]
         }`}
         value={data.totalBacklinks.toLocaleString()}
-        subtitle="*54 BSV"
+        subtitle=""
       />
     </div>
   );

@@ -8,13 +8,13 @@
  */
 
 export const REPORT_CONFIG = {
-  reportDate: "Jan,10 2025",
+  reportDate: "August 12 2026",
 
-  reportPeriodStart: "March 2025",
-  reportPeriodEnd: "December 2025",
-  reportPeriodDisplay: "March -December 2025",
-  baselinePeriod: "Dec'24",
-  currentPeriod: "Dec'25",
+  reportPeriodStart: "December 2025",
+  reportPeriodEnd: "July 2026",
+  reportPeriodDisplay: "December 2025 - July 2026",
+  baselinePeriod: "Dec'25",
+  currentPeriod: "July '26",
   monthOrder: [
     "March",
     "April",
@@ -26,16 +26,23 @@ export const REPORT_CONFIG = {
     "October",
     "November",
     "December",
+    "January",
+    "february",
+    "March",
+    "April",
+    "May",
+    "June",
+    "july",
   ],
 
-  comparisonStartMonth: "March",
-  comparisonEndMonth: "December",
+  comparisonStartMonth: "Dec",
+  comparisonEndMonth: "July",
 
-  comparisonStartMonthAbbr: "Mar",
-  comparisonEndMonthAbbr: "Dec",
+  comparisonStartMonthAbbr: "Dec",
+  comparisonEndMonthAbbr: "July",
 
   baselineMonthAbbr: "Dec",
-  currentMonthAbbr: "Nov",
+  currentMonthAbbr: "July",
 };
 
 export const getMonthRange = (start: string, end: string) => {

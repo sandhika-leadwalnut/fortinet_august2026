@@ -12,7 +12,9 @@ const KeyFindings = ({ keyFindings }: KeyFindingsProps) => {
         {keyFindings.map((finding, index) => (
           <li key={index} className="space-y-1">
             <strong className="text-[#575757]">{finding.title}:</strong>{" "}
-            <span>{finding.description}</span>
+            <span
+  dangerouslySetInnerHTML={{ __html: finding.description }}
+/>
           </li>
         ))}
       </ul>

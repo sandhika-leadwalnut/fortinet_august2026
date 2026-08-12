@@ -11,8 +11,16 @@ export interface BacklinkGrowth {
 }
 
 export interface KeywordRankingPerformance {
-  top3: { march: number; september: number; december: number };
-  firstPage: { march: number; september: number; december: number };
+  top3: {
+    march: number;
+    september: number;
+    december: number;
+  };
+  firstPage: {
+    march: number;
+    september: number;
+    december: number;
+  };
 }
 
 export interface KeywordPosition {

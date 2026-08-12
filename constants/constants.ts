@@ -7,7 +7,7 @@
 
 export const EXTERNAL_URLS = {
   googleSheets:
-    "https://docs.google.com/spreadsheets/d/1lwWY1wvc69U1H1AXFcu1iZm9PyPpbbWBcZEb1j66HUw/edit?gid=0#gid=0",
+    "https://docs.google.com/spreadsheets/d/1Ntq8LwzNQFdYi-UKCfjEo7QGeNTqoVxq5xVKXZed-xY/edit?usp=sharing",
   fortinetBaseUrl: "https://www.fortinet.com",
 };
 

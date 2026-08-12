@@ -6,23 +6,18 @@ export const useKeywordRankingChartData = (
   keywordRankingData?: KeywordRankingPerformance
 ) => {
   const createChartData = (
-    startValue: number,
-    middleValue: number,
-    endValue: number
-  ): KeywordRankingChartData[] => [
-    {
-      name: REPORT_CONFIG.reportPeriodStart,
-      value: startValue,
-    },
-    {
-      name: "September",
-      value: middleValue,
-    },
-    {
-      name: REPORT_CONFIG.reportPeriodEnd,
-      value: endValue,
-    },
-  ];
+  startValue: number,
+  endValue: number
+): KeywordRankingChartData[] => [
+  {
+    name: REPORT_CONFIG.reportPeriodStart, // December
+    value: startValue,
+  },
+  {
+    name: REPORT_CONFIG.reportPeriodEnd, // March
+    value: endValue,
+  },
+];
 
   const calculateMaxValue = (
     top3Value: number,
@@ -40,26 +35,32 @@ export const useKeywordRankingChartData = (
 
   const top3ChartData: KeywordRankingChartData[] = keywordRankingData
     ? createChartData(
-        keywordRankingData.top3.march,
-        keywordRankingData.top3.september,
-        keywordRankingData.top3.december
-      )
+        keywordRankingData.top3.december,
+  
+        keywordRankingData.top3.march
+    )
     : [];
 
   const firstPageChartData: KeywordRankingChartData[] = keywordRankingData
     ? createChartData(
-        keywordRankingData.firstPage.march,
-        keywordRankingData.firstPage.september,
-        keywordRankingData.firstPage.december
+
+        keywordRankingData.firstPage.december,
+          keywordRankingData.firstPage.march
       )
     : [];
 
   const maxVal = keywordRankingData
-    ? calculateMaxValue(
+  ? calculateMaxValue(
+      Math.max(
         keywordRankingData.top3.december,
-        keywordRankingData.firstPage.december
+        keywordRankingData.top3.march
+      ),
+      Math.max(
+        keywordRankingData.firstPage.december,
+        keywordRankingData.firstPage.march
       )
-    : 0;
+    )
+  : 0;
 
   return {
     top3ChartData,

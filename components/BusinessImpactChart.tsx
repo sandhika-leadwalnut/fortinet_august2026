@@ -31,7 +31,9 @@ const BusinessImpactChart = ({
         Business Impact of Backlinks
       </h2>
 
-      <h3 className="text-xl font-semibold text-gray-800 mb-4">
+   
+      
+  <h3 className="text-xl font-semibold text-gray-800 mb-4">
         1. Impact on Keywords Where Backlinks Are Acquired
       </h3>
 
@@ -52,8 +54,9 @@ const BusinessImpactChart = ({
         </div>
       )}
 
+
       <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-8">
-        2. Impact on Overall Keyword Rankings
+       2. Impact on Overall Keyword Rankings
       </h3>
       <p className="text-gray-600 mb-6">
         Baseline ({REPORT_CONFIG.baselinePeriod}) vs Current (

@@ -13,6 +13,7 @@ const BacklinkBestPractices = () => {
         "Domains with a Domain Authority (DA) between 30 and 70+ are targeted.",
         "Referring domains must demonstrate consistent organic traffic of at least 500 visits per month on average over the past six months",
         "Domains must be topically relevant to the linked website's niche, ensuring contextual alignment between the referring page and the target page.",
+        "Internal QA Agent is utilized to assess the quality of referring domains. This agent meticulously validates domain metrics such as Domain Authority (DA) and traffic, alongside relevance and content quality.",
       ],
     },
     {

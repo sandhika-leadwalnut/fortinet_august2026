@@ -23,6 +23,7 @@ import BacklinkBestPractices from "./components/BacklinkBestPractices";
 import BusinessImpactChart from "./components/BusinessImpactChart";
 import BacklinkAcquisitionDetails from "./components/BacklinkAcquisitionDetails";
 import SectionCard from "./components/SectionCard";
+import KeyHighlights from "./components/KeyHighlights";
 
 const App = () => {
   return (
@@ -45,6 +46,8 @@ const App = () => {
       </SectionCard>
       <PerformanceSummaryTable data={performanceSummaryData} />
       <KeyFindings keyFindings={keyFindingsData} />
+
+<KeyHighlights />
       <BacklinkAcquisitionDetails />
       <BacklinkBestPractices />
     </DashboardLayout>
