@@ -511,7 +511,7 @@ export const keyFindingsData: KeyFinding[] = [
   {
     title: "Keyword Visibility",
     description:
-"Between December 2025 and July 2026, the keywords experienced significant growth in rankings, with Top 3 positions increasing by 200% (from 5 to 15) and Page 1 rankings improving by 48% (from 25 to 37)"
+"Between December 2025 and July 2026, the keywords experienced significant growth in rankings, with Top 3 positions increasing by 200% (from 5 to 15) and Page 1 rankings improving by 42% (from 26 to 37)."
   },
   {
     title: "Page Authority (PA) as a Leading Indicator",
@@ -526,5 +526,5 @@ export const keyFindingsData: KeyFinding[] = [
 {
   title: "Strong Backlink Quality",
   description:
-    '77% of acquired backlinks are indexed, indicating that the majority have been successfully discovered by search engines, reflecting strong backlink quality and healthy indexing performance',
+    '84.5%  of acquired backlinks are indexed, indicating that the majority have been successfully discovered by search engines, reflecting strong backlink quality and healthy indexing performance',
 },];
