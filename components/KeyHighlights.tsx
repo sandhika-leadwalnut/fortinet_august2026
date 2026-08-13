@@ -82,10 +82,13 @@ const KeyHighlights = () => {
         "Fortinet leads in 5 out of 10 primary categories, achieving a 50% category leadership rate, demonstrating strong authority across the majority of key cybersecurity topics.",
     },
     {
-      title: "Category Matrix - Market Positioning",
+      title: "Fortinet's Market Positioning Across Different Categories",
       image: "/category matrix-market positioning.jpeg",
-      insight:
-        "Fortinet's LLM Market positioning — Citation Leaders: Quantum Security & Zero Trust. Visibility Leaders: Network Security & Firewall. Strongholds: AI in Cybersecurity, SASE & SD-Wan.",
+      insight: [
+        "Fortinet's LLM Market positioning — Citation Leaders: Quantum Security & Zero Trust",
+        "Visibility Leaders: Network Security & Firewall",
+        "Strongholds: AI in Cybersecurity, SASE & SD-Wan",
+      ],
     },
     {
       title: "Top Citation Domains Landscape",
@@ -147,16 +150,15 @@ const KeyHighlights = () => {
           <div className="space-y-14">
             {priorityPages.map((item, index) => (
               <div key={index}>
-                <img
-                  src={item.image}
-                  alt={item.keyword}
-                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
-                />
-
-                <div className="space-y-3 text-gray-700">
+                <div className="space-y-3 text-gray-700 mb-6">
                   <p>
                     <span className="font-semibold">Keyword:</span>{" "}
                     {item.keyword}
+                  </p>
+
+                  <p>
+                    <span className="font-semibold">Position:</span>{" "}
+                    {item.position}
                   </p>
 
                   <p className="break-all">
@@ -171,18 +173,19 @@ const KeyHighlights = () => {
                     </a>
                   </p>
 
-                  <p>
-                    <span className="font-semibold">Position:</span>{" "}
-                    {item.position}
-                  </p>
                   <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5">
-                <p className="text-gray-700 leading-7">
-                  <span className="font-semibold">Insight:</span>{" "}
-                  {item.insight}
-                </p>
-              </div>
-
+                    <p className="text-gray-700 leading-7">
+                      <span className="font-semibold">Insight:</span>{" "}
+                      {item.insight}
+                    </p>
+                  </div>
                 </div>
+
+                <img
+                  src={item.image}
+                  alt={item.keyword}
+                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm"
+                />
               </div>
             ))}
           </div>
@@ -202,16 +205,15 @@ const KeyHighlights = () => {
           <div className="space-y-14">
             {topCategories.map((item, index) => (
               <div key={index}>
-                <img
-                  src={item.image}
-                  alt={item.keyword}
-                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
-                />
-
-                <div className="space-y-3 text-gray-700">
+                <div className="space-y-3 text-gray-700 mb-6">
                   <p>
                     <span className="font-semibold">Keyword:</span>{" "}
                     {item.keyword}
+                  </p>
+
+                  <p>
+                    <span className="font-semibold">Position:</span>{" "}
+                    {item.position}
                   </p>
 
                   <p className="break-all">
@@ -226,17 +228,19 @@ const KeyHighlights = () => {
                     </a>
                   </p>
 
-                  <p>
-                    <span className="font-semibold">Position:</span>{" "}
-                    {item.position}
-                  </p>
-                     <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5">
-                <p className="text-gray-700 leading-7">
-                  <span className="font-semibold">Insight:</span>{" "}
-                  {item.insight}
-                </p>
-              </div>
+                  <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5">
+                    <p className="text-gray-700 leading-7">
+                      <span className="font-semibold">Insight:</span>{" "}
+                      {item.insight}
+                    </p>
+                  </div>
                 </div>
+
+                <img
+                  src={item.image}
+                  alt={item.keyword}
+                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm"
+                />
               </div>
             ))}
           </div>
@@ -263,18 +267,30 @@ const KeyHighlights = () => {
             <div key={index}>
               <h3 className="text-2xl font-semibold mb-6">{item.title}</h3>
 
+              <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5 mb-6">
+                {Array.isArray(item.insight) ? (
+                  <div className="text-gray-700 leading-7 space-y-1">
+                    <p>
+                      <span className="font-semibold">Insight:</span>{" "}
+                      {item.insight[0]}
+                    </p>
+                    {item.insight.slice(1).map((line, i) => (
+                      <p key={i}>{line}</p>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-gray-700 leading-7">
+                    <span className="font-semibold">Insight:</span>{" "}
+                    {item.insight}
+                  </p>
+                )}
+              </div>
+
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-8"
+                className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm"
               />
-
-              <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5">
-                <p className="text-gray-700 leading-7">
-                  <span className="font-semibold">Insight:</span>{" "}
-                  {item.insight}
-                </p>
-              </div>
             </div>
           ))}
         </div>
@@ -296,34 +312,36 @@ const KeyHighlights = () => {
           <div className="space-y-14">
             {guestPosts.map((post, index) => (
               <div key={index}>
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-[45%] max-w-md mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
-                />
-
-                <div className="space-y-3">
-                  <p className="font-semibold">{post.title}</p>
+                <div className="bg-gray-100 border-l-4 border-gray-400 rounded-lg px-5 py-4 mb-6">
+                  <p className="font-bold text-gray-900 text-lg leading-7">
+                    {post.title}
+                  </p>
 
                   <a
                     href={post.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-blue-600 underline break-all"
+                    className="text-blue-600 underline break-all text-sm mt-2 inline-block"
                   >
                     {post.link}
                   </a>
                 </div>
+
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-[45%] max-w-md mx-auto rounded-xl border border-gray-300 shadow-sm"
+                />
               </div>
             ))}
           </div>
 
-          <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5 mt-10">
+          {/* <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5 mt-10">
             <p className="text-gray-700 leading-7">
               <span className="font-semibold">Insight:</span> Publishing listicle-style ("Best"/"Top") 
               commercial intent content to achieve a dual benefit: earning high-quality backlinks while increasing LLM visibility with brand mentions.
             </p>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

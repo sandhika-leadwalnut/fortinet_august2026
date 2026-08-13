@@ -20,7 +20,9 @@ const KeywordPerformanceChart = ({
     )
     .sort((a, b) => a.rank - b.rank);
 
+  // First Page = ranks 4-10 only, so it never repeats what's already in Top 3
   const uniqueFirstPageData = allFirstPageData
+    .filter((item) => item.rank >= 4)
     .filter(
       (item, index, arr) =>
         arr.findIndex(

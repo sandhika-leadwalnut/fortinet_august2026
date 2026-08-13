@@ -80,7 +80,7 @@ const PerformanceSummaryTable = ({
                     href={row.urlLink || FORTINET_URLS[index] || row.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline transition-colors"
+                    className="italic underline underline-offset-2 decoration-1 hover:decoration-2 transition-colors"
                     style={{
                       color: CHART_COLORS.primary,
                     }}
