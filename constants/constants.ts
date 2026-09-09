@@ -67,11 +67,11 @@ export const SECTION_TITLES = {
   backlinkQualityAssurance: "Backlink Quality Assurance",
   referringDomainsDA: "Referring Domains DA",
   performanceSummaryUrlWiseBreakdown:
-    "Performance Summary - Page wise Breakdown",
+    "Performance Summary - URL wise Breakdown",
 };
 
 export const TABLE_COLUMNS = {
-  url: "Page",
+  url: "URL",
   backlinkGrowth: "Backlink Growth",
   paChange: "PA Change",
   bestKeywordMove: "Best Keyword Move",
