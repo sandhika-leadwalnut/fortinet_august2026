@@ -20,7 +20,7 @@ export const KeywordListCard = ({
         <div className="grid grid-cols-12 px-2 py-2 text-xs font-semibold text-[#000000] border-b border-[#D1D1D1]">
           <div className="col-span-6">Keyword</div>
           <div className="col-span-3 text-center">Position Change</div>
-          <div className="col-span-3 text-center">July Rank</div>
+          <div className="col-span-3 text-center">August Rank</div>
         </div>
         {data.map((kw, index) => {
           const displayChange = kw.change;
