@@ -14,22 +14,23 @@ const KeyHighlights = () => {
       keyword: "network monitoring system",
       link: "https://www.fortinet.com/resources/cyberglossary/network-monitoring",
       position: 8,
-      image: "/SASE Security.jpeg",
+      image: "/network-monitoring.jpeg",
       insight:"The 'Network Monitoring System' keyword has moved onto Page 1, with consistent backlink acquisition helping the page climb out of its earlier volatile positions. "
     },
     {
       keyword: "cyber attack",
       link: "https://www.fortinet.com/resources/cyberglossary/what-is-cyber-attack ",
       position: 7,
-      image: "/Zero Trust Network Access.jpeg",
+      image: "/cyber-attack.jpeg",
       insight:" The 'Cyber Attack' keyword has improved from 9 to 7, moving further up Page 1 and demonstrating continued ranking gains following backlink acquisition. "
     },
+
     {
-      keyword: "Security Operations",
-      link: "https://www.fortinet.com/resources/cyberglossary/what-is-secops",
+      keyword: "what is firewall",
+      link: "www.fortinet.com/resources/cyberglossary/firewall ",
       position: 1,
-      image: "/Security Operations.jpeg",
-      insight:"The high-volume 'Security Operations' keyword (1.4K MSV) has regained the #1 ranking."
+      image: "/firewall.jpeg",
+      insight:"The 'What is Firewall' keyword has climbed to the #1 position, consolidating its Page 1 presence after sustained backlink acquisition throughout the campaign. "
     },
    
   ];
@@ -39,23 +40,24 @@ const KeyHighlights = () => {
       keyword: "role of ai in cyber security",
       link: "https://www.fortinet.com/resources/cyberglossary/artificial-intelligence-in-cybersecurity ",
       position: 3,
-      image: "/PQC.jpeg",
+      image: "/ai-in-cybersecurity.jpeg",
       insight:"The 'Role of AI in Cyber Security' keyword has maintained a strong Top 3 ranking, strengthening Fortinet's search visibility and authority within the AI cybersecurity category."
+    },
+     {
+      keyword: "What is AI Security",
+      link: " https://www.fortinet.com/resources/cyberglossary/ai-security",
+      position: 9,
+      image: "/ai-security.jpeg",
+      insight:"The 'What is AI Security' keyword has settled into a strong Top 10 position at 9, reflecting solid visibility gains in the AI-security category following consistent backlink acquisition."
     },
     {
       keyword: "quantum safe encryption",
       link: "https://www.fortinet.com/blog/industry-trends/quantum-safe-encryption-safeguarding-data-for-the-quantum-era ",
       position: 1,
-      image: "/Shor's Algorithm.jpeg",
+      image: "/quantum-safe.jpeg",
       insight:"The 'Quantum Safe Encryption' keyword experienced a sharp ranking drop mid-campaign, falling out of the Top 100 before recovering decisively back to the #1 position by August — reflecting the impact of sustained backlink acquisition in restoring and strengthening the page's visibility. "
     },
-    {
-      keyword: "Quantum Security",
-      link: "https://www.fortinet.com/resources/cyberglossary/quantum-security",
-      position: 2,
-      image: "/Quantum Security.jpeg",
-      insight:"The 'Quantum Security' keyword has consistently maintained a Top 3 ranking, with sustained backlink efforts helping preserve its strong search visibility. "
-    },
+    
    
   ];
 
@@ -78,7 +80,7 @@ const KeyHighlights = () => {
     },
     {
       title: "Category Matrix - Market Positioning",
-      image: "/categories-matrix.jpeg",
+      image: "/category-matrix .jpeg",
       insight:["Fortinet's LLM Marketing positioning" ,
 "- Citation Leaders - Quantum Security & Zero Trust. ",
 "- Visibility Leaders - Network Security & SD-Wan",
@@ -87,7 +89,7 @@ const KeyHighlights = () => {
     },
     {
       title: "Top citation domains landscape",
-      image: "/top-citation-domain.jpeg",
+      image: "/top-citation-domains.jpeg",
       insight:
         "Fortinet ranks #1 in the citation domains with a share of 8.71%, outperforming Palo Alto Networks (3.84%) and maintaining a strong lead over all major competitors.",
     }
@@ -95,17 +97,17 @@ const KeyHighlights = () => {
 
   const guestPosts = [
     {
-      image: "/7 Best Enterprise Cloud Security.jpeg",
+      image: "/7 Best Enterprise Cloud Security .jpeg",
       title: "7 Best Enterprise Cloud Security Solutions For Growing Businesses",
       link: "https://elementalnest.com/7-best-enterprise-cloud-security-solutions-for-growing-businesses/",
     },
     {
-      image: "/Top 10 SIEM Software Solutions.jpeg",
+      image: "/Top 10 SIEM Software Solutions .jpeg",
       title: " Top 10 SIEM Software Solutions Enterprises Should Consider in 2026 (Listicle) – Humans of Globe",
       link: "https://humansofglobe.com/top-10-siem-software-solutions-enterprises-should-consider-in-2026-listicle/",
     },
     {
-      image: "/5 Best cybersecurity.jpeg",
+      image: "/7 Best cybersecurity.jpeg",
       title: "7 Cybersecurity Brands Explaining AI in Cybersecurity",
       link: "https://grammerway.com/7-cybersecurity-brands-explaining-ai-in-cybersecurity/",
     },
@@ -296,7 +298,7 @@ const KeyHighlights = () => {
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
+                  className="w-[55%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
                 />
 
                 <div className="space-y-3">
