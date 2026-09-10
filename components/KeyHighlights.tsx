@@ -140,8 +140,7 @@ const KeyHighlights = () => {
           </h3>
 
           <p className="text-gray-700 leading-7 mb-10">
-          Network Monitoring System, Cyber Attack, and Unified SASE — moved into Page 1 positions following backlink-driven ranking improvements. 
-          </p>
+ Network Monitoring System, Cyber Attack, and What is Firewall — moved into Page 1 positions following backlink-driven ranking improvements.          </p>
 
           <div className="space-y-14">
             {priorityPages.map((item, index) => (
