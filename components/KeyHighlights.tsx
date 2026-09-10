@@ -146,17 +146,11 @@ const KeyHighlights = () => {
           <div className="space-y-14">
             {priorityPages.map((item, index) => (
               <div key={index}>
-                <img
-                  src={item.image}
-                  alt={item.keyword}
-                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
-                />
-
-                <div className="space-y-3 text-gray-700">
-                  <p>
-                    <span className="font-semibold">Keyword:</span>{" "}
-                    {item.keyword}
-                  </p>
+                 <div className="space-y-3 text-gray-700">
+                <p>
+          <span className="font-semibold">{index + 1}. Keyword:</span>{" "}
+          {item.keyword}
+        </p>
 
                   <p className="break-all">
                     <span className="font-semibold">Link:</span>{" "}
@@ -182,6 +176,15 @@ const KeyHighlights = () => {
               </div>
 
                 </div>
+                <br></br>
+                <img
+                 
+                  alt={item.keyword}
+                  src={item.image}
+                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
+                />
+
+               
               </div>
             ))}
           </div>
@@ -201,17 +204,11 @@ const KeyHighlights = () => {
           <div className="space-y-14">
             {topCategories.map((item, index) => (
               <div key={index}>
-                <img
-                  src={item.image}
-                  alt={item.keyword}
-                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
-                />
-
                 <div className="space-y-3 text-gray-700">
                   <p>
-                    <span className="font-semibold">Keyword:</span>{" "}
-                    {item.keyword}
-                  </p>
+          <span className="font-semibold">{index + 1}. Keyword:</span>{" "}
+          {item.keyword}
+        </p>
 
                   <p className="break-all">
                     <span className="font-semibold">Link:</span>{" "}
@@ -236,6 +233,13 @@ const KeyHighlights = () => {
                 </p>
               </div>
                 </div>
+                <img
+                  src={item.image}
+                  alt={item.keyword}
+                  className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
+                />
+
+                
               </div>
             ))}
           </div>
@@ -268,13 +272,28 @@ const KeyHighlights = () => {
                 className="w-[85%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-8"
               />
 
-              <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5">
-                <p className="text-gray-700 leading-7">
-                  <span className="font-semibold">Insight:</span>{" "}
-                  {item.insight}
-                </p>
+                         <div className="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-5">
+                {Array.isArray(item.insight) ? (
+                  <div className="text-gray-700 leading-7 space-y-1">
+                    <p>
+                      <span className="font-semibold">Insight:</span>{" "}
+                      {item.insight[0]}
+                    </p>
+                    {item.insight.slice(1).map((line, i) => (
+                      <p key={i} className="ml-4">
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-gray-700 leading-7">
+                    <span className="font-semibold">Insight:</span>{" "}
+                    {item.insight}
+                  </p>
+                )}
               </div>
             </div>
+            
           ))}
         </div>
 
@@ -282,7 +301,7 @@ const KeyHighlights = () => {
 
         <div>
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-            Listicle Type of Guest Posts - Third-Party Guest Posts for Brand Mentions
+            Listicle Type of Guest Posts - Third-Party Guest Posts to improve Brand Mentions
           </h3>
 
           <p className="text-gray-700 leading-7 mb-10">
@@ -295,14 +314,12 @@ const KeyHighlights = () => {
           <div className="space-y-14">
             {guestPosts.map((post, index) => (
               <div key={index}>
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-[55%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
-                />
-
-                <div className="space-y-3">
-                  <p className="font-semibold">{post.title}</p>
+                 <div className="space-y-3">
+                  <p>
+          <span className="font-semibold">{index + 1}. {post.title}</span>{" "}
+        
+        </p>
+                  {/* <p className="font-semibold">{post.title}</p> */}
 
                   <a
                     href={post.link}
@@ -313,6 +330,14 @@ const KeyHighlights = () => {
                     {post.link}
                   </a>
                 </div>
+                <br></br>
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-[55%] mx-auto rounded-xl border border-gray-300 shadow-sm mb-6"
+                />
+
+               
               </div>
             ))}
           </div>
